@@ -22,12 +22,36 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Eyeglasses/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXllZ2xhc3Nlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Eyeglasses/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXllZ2xhc3Nlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Eyeglasses/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXllZ2xhc3Nlc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Eyeglasses/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXllZ2xhc3Nlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Eyeglasses/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXllZ2xhc3Nlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Privacy.cshtml]

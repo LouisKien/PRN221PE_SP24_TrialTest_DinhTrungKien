@@ -12,3 +12,4 @@ D:\Semester 7 - DotNet\PRN221\Project\PE\PRN221PE_SP24_TrialTest_DinhTrungKien_R
 D:\Semester 7 - DotNet\PRN221\Project\PE\PRN221PE_SP24_TrialTest_DinhTrungKien_Repo\bin\Debug\net6.0\PRN221PE_SP24_TrialTest_DinhTrungKien_Repo.runtimeconfig.json
 D:\Semester 7 - DotNet\PRN221\Project\PE\PRN221PE_SP24_TrialTest_DinhTrungKien_Repo\obj\Debug\net6.0\PRN221PE_SP24_TrialTest_DinhTrungKien_Repo.csproj.AssemblyReference.cache
 D:\Semester 7 - DotNet\PRN221\Project\PE\PRN221PE_SP24_TrialTest_DinhTrungKien_Repo\obj\Debug\net6.0\PRN221PE_SP24_TrialTest_DinhTrungKien_Repo.genruntimeconfig.cache
+D:\Semester 7 - DotNet\PRN221\Project\PE\PRN221PE_SP24_TrialTest_DinhTrungKien_Repo\obj\Debug\net6.0\PRN221PE_SP24_TrialTest_DinhTrungKien_Repo.sourcelink.json

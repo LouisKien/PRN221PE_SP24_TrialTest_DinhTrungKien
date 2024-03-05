@@ -1,0 +1,72 @@
+﻿@page
+@model PRN221PE_SP24_TrialTest_DinhTrungKien.Pages.Eyeglasses.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Eyeglass[0].EyeglassesName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Eyeglass[0].EyeglassesDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Eyeglass[0].FrameColor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Eyeglass[0].Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Eyeglass[0].Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Eyeglass[0].CreatedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Eyeglass[0].LensType.LensTypeName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Eyeglass) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EyeglassesName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EyeglassesDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FrameColor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LensType.LensTypeName)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.EyeglassesId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.EyeglassesId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.EyeglassesId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

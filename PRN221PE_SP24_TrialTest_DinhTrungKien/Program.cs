@@ -1,7 +1,16 @@
+using PRN221PE_SP24_TrialTest_DinhTrungKien.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDatabase(connectionString);
+builder.Services.AddUnitOfWork();
+
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddSession();
 
 var app = builder.Build();
 
@@ -20,14 +29,18 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapRazorPages();
+app.UseSession();
 
-    endpoints.MapGet("/", async context =>
-    {
-        context.Response.Redirect("/Login");
-    });
-});
+app.MapRazorPages();
+
+//app.UseEndpoints(endpoints =>
+//{
+//    endpoints.MapRazorPages();
+
+//    endpoints.MapGet("/", async context =>
+//    {
+//        context.Response.Redirect("/Login");
+//    });
+//});
 
 app.Run();

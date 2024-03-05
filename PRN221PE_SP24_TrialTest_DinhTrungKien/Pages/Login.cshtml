@@ -1,4 +1,13 @@
 ﻿@page
 @model PRN221PE_SP24_TrialTest_DinhTrungKien.Pages.LoginModel
 @{
+    ViewData["Title"] = "Log in";
 }
+<form method="post">
+    <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+    <label asp-for="LoginInfo.Email"></label>
+    <input type="text" asp-for="LoginInfo.Email" class="form-control" />
+    <label asp-for="LoginInfo.Password"></label>
+    <input type="password" asp-for="LoginInfo.Password" class="form-control" />
+    <input type="submit" class="btn btn-primary" value="Login" />
+</form>
