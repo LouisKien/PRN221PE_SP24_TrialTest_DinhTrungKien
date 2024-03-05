@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\PRN221PE_SP24_TrialTest_DinhTrungKien.props" />
+</Project>
