@@ -10,6 +10,12 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
+<div>
+Search: <input id="searchInput" type="text" /> 
+<button onclick="searchProducts()">
+    Search
+</button>
+</div>
 <table class="table">
     <thead>
         <tr>
@@ -68,5 +74,41 @@
             </td>
         </tr>
 }
+        <div>
+            <!-- Hiển thị số trang -->
+            @if (Model.TotalPages > 1)
+            {
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        @for (int i = 1; i <= Model.TotalPages; i++)
+                        {
+                            <li class="page-item @(Model.CurrentPage == i ? "active" : "")">
+                                <a class="page-link" href="?pageIndex=@i&searchInput=@ViewData["SearchInput"]">@i</a>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            }
+        </div>
     </tbody>
 </table>
+
+@section scripts {
+    <script>
+        // Function to set the value of the search input based on the query parameter
+        function setSearchInputValue() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var searchTerm = urlParams.get('searchInput');
+            document.getElementById("searchInput").value = searchTerm;
+        }
+
+        // Call the function when the page loads
+        window.onload = function () {
+            setSearchInputValue();
+        };
+        function searchProducts() {
+            var searchTerm = document.getElementById("searchInput").value;
+            window.location.href = "/Eyeglasses?searchInput=" + searchTerm;
+        }
+    </script>
+}

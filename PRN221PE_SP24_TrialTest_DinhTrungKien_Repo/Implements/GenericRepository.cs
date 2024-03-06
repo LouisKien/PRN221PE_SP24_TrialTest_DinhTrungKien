@@ -36,7 +36,12 @@ namespace PRN221PE_SP24_TrialTest_DinhTrungKien.Repo.Implements
             return dbSet.Where(expression);
         }
 
-        public IEnumerable<TEntity> Get(Expression<Func<TEntity, bool>> filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, string includeProperties = "")
+        public virtual IEnumerable<TEntity> Get(
+        Expression<Func<TEntity, bool>> filter = null,
+        Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
+        string includeProperties = "",
+        int? pageIndex = null,
+        int? pageSize = null)
         {
             IQueryable<TEntity> query = dbSet;
 
@@ -53,12 +58,18 @@ namespace PRN221PE_SP24_TrialTest_DinhTrungKien.Repo.Implements
 
             if (orderBy != null)
             {
-                return orderBy(query).ToList();
+                query = orderBy(query);
             }
-            else
+
+            if (pageIndex.HasValue && pageSize.HasValue)
             {
-                return query.ToList();
+                int validPageIndex = pageIndex.Value > 0 ? pageIndex.Value - 1 : 0;
+                int validPageSize = pageSize.Value > 0 ? pageSize.Value : 4;
+
+                query = query.Skip(validPageIndex * validPageSize).Take(validPageSize);
             }
+
+            return query.ToList();
         }
 
         public TEntity GetByID(object id)
@@ -75,6 +86,18 @@ namespace PRN221PE_SP24_TrialTest_DinhTrungKien.Repo.Implements
         {
             dbSet.Attach(entityToUpdate);
             context.Entry(entityToUpdate).State = EntityState.Modified;
+        }
+
+        public int Count(Expression<Func<TEntity, bool>> filter = null)
+        {
+            IQueryable<TEntity> query = dbSet;
+
+            if (filter != null)
+            {
+                query = query.Where(filter);
+            }
+
+            return query.Count();
         }
     }
 }

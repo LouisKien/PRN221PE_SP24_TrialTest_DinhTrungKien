@@ -7,7 +7,7 @@ namespace PRN221PE_SP24_TrialTest_DinhTrungKien.Repo.Interfaces
         IEnumerable<TEntity> Get(
             Expression<Func<TEntity, bool>> filter = null,
             Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
-            string includeProperties = "");
+            string includeProperties = "", int? pageIndex = null, int? pageSize = null);
 
         TEntity GetByID(object id);
 
@@ -20,5 +20,7 @@ namespace PRN221PE_SP24_TrialTest_DinhTrungKien.Repo.Interfaces
         void Delete(TEntity entityToDelete);
 
         void Update(TEntity entityToUpdate);
+
+        public int Count(Expression<Func<TEntity, bool>> filter = null);
     }
 }
