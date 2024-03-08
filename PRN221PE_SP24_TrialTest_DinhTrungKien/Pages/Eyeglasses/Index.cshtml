@@ -93,7 +93,7 @@ Max Price: <input id="maxPriceInput" type="number" min="0"/>
                         @for (int i = 1; i <= Model.TotalPages; i++)
                         {
                             <li class="page-item @(Model.CurrentPage == i ? "active" : "")">
-                                <a class="page-link" href="?pageIndex=@i&searchInput=@ViewData["SearchInput"]">@i</a>
+                                <a class="page-link" href="?pageIndex=@i&searchInput=@ViewData["SearchInput"]&minPrice=@ViewData["MinPriceInput"]&maxPrice=@ViewData["MaxPriceInput"]">@i</a>
                             </li>
                         }
                     </ul>

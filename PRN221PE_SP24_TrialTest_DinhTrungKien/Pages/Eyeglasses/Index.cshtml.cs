@@ -40,7 +40,9 @@ namespace PRN221PE_SP24_TrialTest_DinhTrungKien.Pages.Eyeglasses
                 return RedirectToPage("/Index");
             }
             ViewData["SearchInput"] = searchInput;
-            
+            ViewData["MinPriceInput"] = minPrice;
+            ViewData["MaxPriceInput"] = maxPrice;
+
             totalItems = CountSearchingMinMaxPrice(searchInput, minPrice, maxPrice);
 
             TotalPages = (int)Math.Ceiling(totalItems / (double)4); // Tính tổng số trang
