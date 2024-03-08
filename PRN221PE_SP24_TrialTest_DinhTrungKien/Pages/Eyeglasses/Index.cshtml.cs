@@ -26,7 +26,7 @@ namespace PRN221PE_SP24_TrialTest_DinhTrungKien.Pages.Eyeglasses
         public int TotalPages { get; private set; }
         public int CurrentPage { get; private set; }
 
-        public IActionResult OnGet(int? pageIndex, string? searchInput)
+        public IActionResult OnGet(int? pageIndex, string? searchInput, int? minPrice, int? maxPrice)
         {
             int totalItems;
             var session = _httpContextAccessor.HttpContext.Session;
@@ -40,14 +40,8 @@ namespace PRN221PE_SP24_TrialTest_DinhTrungKien.Pages.Eyeglasses
                 return RedirectToPage("/Index");
             }
             ViewData["SearchInput"] = searchInput;
-            if (string.IsNullOrWhiteSpace(searchInput))
-            {
-                totalItems = _unitOfWork.EyeglassRepository.Count();
-            }
-            else
-            {
-                totalItems = _unitOfWork.EyeglassRepository.Count(filter: e => e.EyeglassesDescription.Contains(searchInput.Trim()) || e.Price.ToString().Contains(searchInput.Trim()));
-            }
+            
+            totalItems = CountSearchingMinMaxPrice(searchInput, minPrice, maxPrice);
 
             TotalPages = (int)Math.Ceiling(totalItems / (double)4); // Tính tổng số trang
 
@@ -58,16 +52,65 @@ namespace PRN221PE_SP24_TrialTest_DinhTrungKien.Pages.Eyeglasses
             else if (CurrentPage > TotalPages)
                 CurrentPage = TotalPages;
 
-            if (string.IsNullOrWhiteSpace(searchInput))
+            GetSearchingList(searchInput, minPrice, maxPrice, CurrentPage);
+
+            return Page();
+        }
+
+        public int CountSearchingMinMaxPrice(string? searchInput, int? minPrice, int? maxPrice)
+        {
+            int totalItems = 0;
+            if (string.IsNullOrWhiteSpace(searchInput)) searchInput = "";
+            if (minPrice < 0 || minPrice == null)
             {
-                Eyeglass = _unitOfWork.EyeglassRepository.Get(includeProperties: "LensType", orderBy: q => q.OrderByDescending(e => e.CreatedDate), pageIndex: CurrentPage, pageSize: 4).ToList();
+                if (maxPrice < 0 || maxPrice == null)
+                {
+                    totalItems = _unitOfWork.EyeglassRepository.Count(filter: e => e.EyeglassesDescription.Contains(searchInput.Trim()));
+                }
+                else
+                {
+                    totalItems = _unitOfWork.EyeglassRepository.Count(filter: e => e.Price <= maxPrice && e.EyeglassesDescription.Contains(searchInput.Trim()));
+                }
             }
             else
             {
-                Eyeglass = _unitOfWork.EyeglassRepository.Get(includeProperties: "LensType", filter: e => e.EyeglassesDescription.Contains(searchInput.Trim()) || e.Price.ToString().Contains(searchInput.Trim()), orderBy: q => q.OrderByDescending(e => e.CreatedDate), pageIndex: CurrentPage, pageSize: 4).ToList();
+                if (maxPrice < 0 || maxPrice == null || maxPrice < minPrice)
+                {
+                    totalItems = _unitOfWork.EyeglassRepository.Count(filter: e => e.Price >= minPrice && e.EyeglassesDescription.Contains(searchInput.Trim()));
+                }
+                else
+                {
+                    totalItems = _unitOfWork.EyeglassRepository.Count(filter: e => e.Price >= minPrice && e.Price <= maxPrice && e.EyeglassesDescription.Contains(searchInput.Trim()));
+                }
             }
+            return totalItems;
+        }
 
-            return Page();
+        public void GetSearchingList(string? searchInput, int? minPrice, int? maxPrice, int CurrentPage)
+        {
+            if (string.IsNullOrWhiteSpace(searchInput)) searchInput = "";
+            if (minPrice < 0 || minPrice == null)
+            {
+                if (maxPrice < 0 || maxPrice == null)
+                {
+                    Eyeglass = _unitOfWork.EyeglassRepository.Get(includeProperties: "LensType", filter: e => e.EyeglassesDescription.Contains(searchInput.Trim()), orderBy: q => q.OrderByDescending(e => e.CreatedDate), pageIndex: CurrentPage, pageSize: 4).ToList();
+                }
+                else
+                {
+                    Eyeglass = _unitOfWork.EyeglassRepository.Get(includeProperties: "LensType", filter: e => e.Price <= maxPrice && e.EyeglassesDescription.Contains(searchInput.Trim()), orderBy: q => q.OrderByDescending(e => e.CreatedDate), pageIndex: CurrentPage, pageSize: 4).ToList();
+                }
+            }
+            else
+            {
+                if (maxPrice < 0 || maxPrice == null || maxPrice < minPrice)
+                {
+                    Eyeglass = _unitOfWork.EyeglassRepository.Get(includeProperties: "LensType", filter: e => e.Price >= minPrice && e.EyeglassesDescription.Contains(searchInput.Trim()), orderBy: q => q.OrderByDescending(e => e.CreatedDate), pageIndex: CurrentPage, pageSize: 4).ToList();
+                }
+                else
+                {
+                    Eyeglass = _unitOfWork.EyeglassRepository.Get(includeProperties: "LensType", filter: e => e.Price >= minPrice && e.Price <= maxPrice && e.EyeglassesDescription.Contains(searchInput.Trim()), orderBy: q => q.OrderByDescending(e => e.CreatedDate), pageIndex: CurrentPage, pageSize: 4).ToList();
+                }
+            }
         }
     }
 }

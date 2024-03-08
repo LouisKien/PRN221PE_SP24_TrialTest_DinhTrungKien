@@ -16,7 +16,9 @@
     <a asp-page="Create">Create New</a>
 </p>
 <div>
-Search: <input id="searchInput" type="text" /> 
+Search Description: <input id="searchInput" type="text" />
+Min Price: <input id="minPriceInput" type="number" min="0"/>
+Max Price: <input id="maxPriceInput" type="number" min="0"/>
 <button onclick="searchProducts()">
     Search
 </button>
@@ -73,10 +75,10 @@ Search: <input id="searchInput" type="text" />
                 @Html.DisplayFor(modelItem => item.LensType.LensTypeName)
             </td>
             <td>
-                    <a asp-page="./Details" asp-route-id="@item.EyeglassesId">Details</a>
+                    <a asp-page="./Details" asp-route-id="@item.EyeglassesId">Details |</a>
                     @if (role.Equals("1"))
                     {
-                        <a asp-page="./Edit" asp-route-id="@item.EyeglassesId">| Edit |</a>
+                        <a asp-page="./Edit" asp-route-id="@item.EyeglassesId">Edit |</a>
                         <a asp-page="./Delete" asp-route-id="@item.EyeglassesId">Delete |</a>
                     }
             </td>
@@ -107,16 +109,33 @@ Search: <input id="searchInput" type="text" />
         function setSearchInputValue() {
             var urlParams = new URLSearchParams(window.location.search);
             var searchTerm = urlParams.get('searchInput');
+            var minPrice = urlParams.get('minPrice');
+            var maxPrice = urlParams.get('maxPrice');
             document.getElementById("searchInput").value = searchTerm;
+            document.getElementById("minPriceInput").value = minPrice;
+            document.getElementById("maxPriceInput").value = maxPrice;
         }
 
         // Call the function when the page loads
         window.onload = function () {
             setSearchInputValue();
         };
+
         function searchProducts() {
             var searchTerm = document.getElementById("searchInput").value;
-            window.location.href = "/Eyeglasses?searchInput=" + searchTerm;
+            var minPrice = document.getElementById("minPriceInput").value;
+            var maxPrice = document.getElementById("maxPriceInput").value;
+
+            // Construct the URL with search and price parameters
+            var url = "/Eyeglasses?searchInput=" + searchTerm;
+            if (minPrice !== "") {
+                url += "&minPrice=" + minPrice;
+            }
+            if (maxPrice !== "") {
+                url += "&maxPrice=" + maxPrice;
+            }
+
+            window.location.href = url;
         }
     </script>
 }
