@@ -33,7 +33,7 @@ namespace PRN221PE_SP24_TrialTest_DinhTrungKien.Pages.Eyeglasses
             {
                 return RedirectToPage("/Index");
             }
-            if (!userRole.Equals("1") && !userRole.Equals("2"))
+            if (!userRole.Equals("1"))
             {
                 return RedirectToPage("/Index");
             }
@@ -64,7 +64,7 @@ namespace PRN221PE_SP24_TrialTest_DinhTrungKien.Pages.Eyeglasses
             {
                 return RedirectToPage("/Index");
             }
-            if (!userRole.Equals("1") && !userRole.Equals("2"))
+            if (!userRole.Equals("1"))
             {
                 return RedirectToPage("/Index");
             }

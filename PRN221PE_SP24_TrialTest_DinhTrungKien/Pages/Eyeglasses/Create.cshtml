@@ -14,43 +14,38 @@
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Eyeglass.EyeglassesId" class="control-label"></label>
-                <input asp-for="Eyeglass.EyeglassesId" class="form-control" />
-                <span asp-validation-for="Eyeglass.EyeglassesId" class="text-danger"></span>
+                <label asp-for="ValidEyeglassesData.EyeglassesId" class="control-label"></label>
+                <input asp-for="ValidEyeglassesData.EyeglassesId" class="form-control" />
+                <span asp-validation-for="ValidEyeglassesData.EyeglassesId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Eyeglass.EyeglassesName" class="control-label"></label>
-                <input asp-for="Eyeglass.EyeglassesName" class="form-control" />
-                <span asp-validation-for="Eyeglass.EyeglassesName" class="text-danger"></span>
+                <label asp-for="ValidEyeglassesData.EyeglassesName" class="control-label"></label>
+                <input asp-for="ValidEyeglassesData.EyeglassesName" class="form-control" />
+                <span asp-validation-for="ValidEyeglassesData.EyeglassesName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Eyeglass.EyeglassesDescription" class="control-label"></label>
-                <input asp-for="Eyeglass.EyeglassesDescription" class="form-control" />
-                <span asp-validation-for="Eyeglass.EyeglassesDescription" class="text-danger"></span>
+                <label asp-for="ValidEyeglassesData.EyeglassesDescription" class="control-label"></label>
+                <input asp-for="ValidEyeglassesData.EyeglassesDescription" class="form-control" />
+                <span asp-validation-for="ValidEyeglassesData.EyeglassesDescription" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Eyeglass.FrameColor" class="control-label"></label>
-                <input asp-for="Eyeglass.FrameColor" class="form-control" />
-                <span asp-validation-for="Eyeglass.FrameColor" class="text-danger"></span>
+                <label asp-for="ValidEyeglassesData.FrameColor" class="control-label"></label>
+                <input asp-for="ValidEyeglassesData.FrameColor" class="form-control" />
+                <span asp-validation-for="ValidEyeglassesData.FrameColor" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Eyeglass.Price" class="control-label"></label>
-                <input asp-for="Eyeglass.Price" class="form-control" />
-                <span asp-validation-for="Eyeglass.Price" class="text-danger"></span>
+                <label asp-for="ValidEyeglassesData.Price" class="control-label"></label>
+                <input asp-for="ValidEyeglassesData.Price" class="form-control" />
+                <span asp-validation-for="ValidEyeglassesData.Price" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Eyeglass.Quantity" class="control-label"></label>
-                <input asp-for="Eyeglass.Quantity" class="form-control" />
-                <span asp-validation-for="Eyeglass.Quantity" class="text-danger"></span>
+                <label asp-for="ValidEyeglassesData.Quantity" class="control-label"></label>
+                <input asp-for="ValidEyeglassesData.Quantity" class="form-control" />
+                <span asp-validation-for="ValidEyeglassesData.Quantity" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Eyeglass.CreatedDate" class="control-label"></label>
-                <input asp-for="Eyeglass.CreatedDate" class="form-control" />
-                <span asp-validation-for="Eyeglass.CreatedDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Eyeglass.LensTypeId" class="control-label"></label>
-                <select asp-for="Eyeglass.LensTypeId" class ="form-control" asp-items="ViewBag.LensTypeName"></select>
+                <label asp-for="ValidEyeglassesData.LensTypeId" class="control-label"></label>
+                <select asp-for="ValidEyeglassesData.LensTypeId" class="form-control" asp-items="ViewBag.LensTypeName"></select>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

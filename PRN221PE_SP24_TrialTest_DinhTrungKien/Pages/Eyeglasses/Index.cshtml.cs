@@ -42,11 +42,11 @@ namespace PRN221PE_SP24_TrialTest_DinhTrungKien.Pages.Eyeglasses
             ViewData["SearchInput"] = searchInput;
             if (string.IsNullOrWhiteSpace(searchInput))
             {
-                totalItems = _unitOfWork.EyeglassRepository.Get(includeProperties: "LensType").ToList().Count();
+                totalItems = _unitOfWork.EyeglassRepository.Count();
             }
             else
             {
-                totalItems = _unitOfWork.EyeglassRepository.Get(includeProperties: "LensType", filter: e => e.EyeglassesDescription.Contains(searchInput.Trim()) || e.Price.ToString().Contains(searchInput.Trim())).ToList().Count();
+                totalItems = _unitOfWork.EyeglassRepository.Count(filter: e => e.EyeglassesDescription.Contains(searchInput.Trim()) || e.Price.ToString().Contains(searchInput.Trim()));
             }
 
             TotalPages = (int)Math.Ceiling(totalItems / (double)4); // Tính tổng số trang
@@ -60,11 +60,11 @@ namespace PRN221PE_SP24_TrialTest_DinhTrungKien.Pages.Eyeglasses
 
             if (string.IsNullOrWhiteSpace(searchInput))
             {
-                Eyeglass = _unitOfWork.EyeglassRepository.Get(includeProperties: "LensType", pageIndex: CurrentPage, pageSize: 4).ToList();
+                Eyeglass = _unitOfWork.EyeglassRepository.Get(includeProperties: "LensType", orderBy: q => q.OrderByDescending(e => e.CreatedDate), pageIndex: CurrentPage, pageSize: 4).ToList();
             }
             else
             {
-                Eyeglass = _unitOfWork.EyeglassRepository.Get(includeProperties: "LensType", filter: e => e.EyeglassesDescription.Contains(searchInput.Trim()) || e.Price.ToString().Contains(searchInput.Trim()), pageIndex: CurrentPage, pageSize: 4).ToList();
+                Eyeglass = _unitOfWork.EyeglassRepository.Get(includeProperties: "LensType", filter: e => e.EyeglassesDescription.Contains(searchInput.Trim()) || e.Price.ToString().Contains(searchInput.Trim()), orderBy: q => q.OrderByDescending(e => e.CreatedDate), pageIndex: CurrentPage, pageSize: 4).ToList();
             }
 
             return Page();

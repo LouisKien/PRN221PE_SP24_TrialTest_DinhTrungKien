@@ -23,7 +23,7 @@ namespace PRN221PE_SP24_TrialTest_DinhTrungKien.Pages.Eyeglasses
         }
 
         [BindProperty]
-        public Eyeglass Eyeglass { get; set; } = default!;
+        public ValidEyeglassesData ValidEyeglassesData { get; set; } = default!;
 
         public IActionResult OnGet(int? id)
         {
@@ -33,7 +33,7 @@ namespace PRN221PE_SP24_TrialTest_DinhTrungKien.Pages.Eyeglasses
             {
                 return RedirectToPage("/Index");
             }
-            if (!userRole.Equals("1") && !userRole.Equals("2"))
+            if (!userRole.Equals("1"))
             {
                 return RedirectToPage("/Index");
             }
@@ -47,7 +47,18 @@ namespace PRN221PE_SP24_TrialTest_DinhTrungKien.Pages.Eyeglasses
             {
                 return NotFound();
             }
-            Eyeglass = eyeglass;
+            var validEyeglassesData = new ValidEyeglassesData
+            {
+                EyeglassesId = eyeglass.EyeglassesId,
+                EyeglassesName = eyeglass.EyeglassesName,
+                EyeglassesDescription = eyeglass.EyeglassesDescription,
+                FrameColor = eyeglass.FrameColor,
+                Quantity = eyeglass.Quantity,
+                Price = eyeglass.Price,
+                CreatedDate = eyeglass.CreatedDate,
+                LensTypeId = eyeglass.LensTypeId
+            };
+            ValidEyeglassesData = validEyeglassesData;
             ViewData["LensTypeName"] = new SelectList(_unitOfWork.LensTypeRepository.Get(), "LensTypeId", "LensTypeName");
             return Page();
         }
@@ -62,7 +73,7 @@ namespace PRN221PE_SP24_TrialTest_DinhTrungKien.Pages.Eyeglasses
             {
                 return RedirectToPage("/Index");
             }
-            if (!userRole.Equals("1") && !userRole.Equals("2"))
+            if (!userRole.Equals("1"))
             {
                 return RedirectToPage("/Index");
             }
@@ -70,8 +81,18 @@ namespace PRN221PE_SP24_TrialTest_DinhTrungKien.Pages.Eyeglasses
             {
                 return Page();
             }
-
-            _unitOfWork.EyeglassRepository.Update(Eyeglass);
+            var newEyeglassInfo = new Eyeglass
+            {
+                EyeglassesId = ValidEyeglassesData.EyeglassesId,
+                EyeglassesName = ValidEyeglassesData.EyeglassesName,
+                EyeglassesDescription = ValidEyeglassesData.EyeglassesDescription,
+                FrameColor = ValidEyeglassesData.FrameColor,
+                Quantity = ValidEyeglassesData.Quantity,
+                Price = ValidEyeglassesData.Price,
+                CreatedDate = ValidEyeglassesData.CreatedDate,
+                LensTypeId = ValidEyeglassesData.LensTypeId
+            };
+            _unitOfWork.EyeglassRepository.Update(newEyeglassInfo);
 
             try
             {
@@ -79,7 +100,7 @@ namespace PRN221PE_SP24_TrialTest_DinhTrungKien.Pages.Eyeglasses
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!EyeglassExists(Eyeglass.EyeglassesId))
+                if (!EyeglassExists(ValidEyeglassesData.EyeglassesId))
                 {
                     return NotFound();
                 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PRN221PE_SP24_TrialTest_DinhTrungKien_Repo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+494531645b237aedfffb4dcf98f2fc289d48c36b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d0545fb8f9483fe5bc73920394cd151bb19da49")]
 [assembly: System.Reflection.AssemblyProductAttribute("PRN221PE_SP24_TrialTest_DinhTrungKien_Repo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PRN221PE_SP24_TrialTest_DinhTrungKien_Repo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

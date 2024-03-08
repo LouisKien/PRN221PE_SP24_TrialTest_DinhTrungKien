@@ -9,67 +9,67 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PRN221PE_SP24_TrialTest_DinhTrungKien
 build_property.RootNamespace = PRN221PE_SP24_TrialTest_DinhTrungKien
-build_property.ProjectDir = D:\Semester 7 - DotNet\PRN221\Project\PE\PRN221PE_SP24_TrialTest_DinhTrungKien\PRN221PE_SP24_TrialTest_DinhTrungKien\
+build_property.ProjectDir = D:\Semester 7 - DotNet\PRN221\Project\PE\PRN221PE_SP24_TrialTest_DinhTrungKien\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Semester 7 - DotNet\PRN221\Project\PE\PRN221PE_SP24_TrialTest_DinhTrungKien\PRN221PE_SP24_TrialTest_DinhTrungKien
+build_property.MSBuildProjectDirectory = D:\Semester 7 - DotNet\PRN221\Project\PE\PRN221PE_SP24_TrialTest_DinhTrungKien
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Error.cshtml]
+[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Eyeglasses/Create.cshtml]
+[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Eyeglasses/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXllZ2xhc3Nlc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Eyeglasses/Delete.cshtml]
+[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Eyeglasses/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXllZ2xhc3Nlc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Eyeglasses/Details.cshtml]
+[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Eyeglasses/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXllZ2xhc3Nlc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Eyeglasses/Edit.cshtml]
+[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Eyeglasses/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXllZ2xhc3Nlc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Eyeglasses/Index.cshtml]
+[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Eyeglasses/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXllZ2xhc3Nlc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Index.cshtml]
+[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Login.cshtml]
+[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Logout.cshtml]
+[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Privacy.cshtml]
+[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/_ViewImports.cshtml]
+[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/_ViewStart.cshtml]
+[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Shared/_Layout.cshtml]
+[D:/Semester 7 - DotNet/PRN221/Project/PE/PRN221PE_SP24_TrialTest_DinhTrungKien/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-b67x9m2w17
